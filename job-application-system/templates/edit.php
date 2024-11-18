@@ -7,11 +7,16 @@ if (!$id) {
     exit;
 }
 
-$applicant = readApplicants()[ 'querySet' ];
+$applicant = readApplicants()['querySet'];
 
-foreach($applicant as $item){
-    if($item['id']==$id){ $data=$item; }
+$data = null;
+foreach ($applicant as $item) {
+    if ($item['id'] == $id) {
+        $data = $item;
+        break;
+    }
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response = updateApplicant($id, $_POST);
     if ($response['statusCode'] === 200) {
@@ -22,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,41 +38,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Edit Applicant</h1>
+
     <?php if (isset($error)): ?>
         <p style="color: red;"><?= htmlspecialchars($error) ?></p>
     <?php endif; ?>
-    <form action="create.php" method="post">
-    <div class="form-group">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" required>
-    </div>
-    
-    <div class="form-group">
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" required>
-    </div>
-    
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    </div>
 
-    <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" required>
-    </div>
+    <form method="post" action="">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" value="<?= htmlspecialchars($data['first_name']) ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" value="<?= htmlspecialchars($data['last_name']) ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="<?= htmlspecialchars($data['email']) ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" id="phone" value="<?= htmlspecialchars($data['phone']) ?>" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" required><?= htmlspecialchars($data['address']) ?></textarea>
+        </div>
+        <div class="form-group">
+            <label for="qualifications">Qualifications:</label>
+            <textarea name="qualifications" id="qualifications" required><?= htmlspecialchars($data['qualifications']) ?></textarea>
+        </div>
 
-    <div class="form-group">
-        <label for="address">Address</label>
-        <textarea id="address" name="address" required></textarea>
-    </div>
+        <input type="hidden" name="action" value="update">
 
-    <div class="form-group">
-        <label for="qualifications">Qualifications</label>
-        <textarea id="qualifications" name="qualifications" required></textarea>
-    </div>
+        <button type="submit">Update</button>
 
-    <button type="submit">Submit</button>
-</form>
+        <a href="../index.php" class="cancel-btn">Cancel</a>
+    </form>
 </body>
 </html>
