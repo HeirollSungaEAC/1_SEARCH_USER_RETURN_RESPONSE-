@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #800000; /* Maroon Color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 36px;
+}
+
+a {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #800000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #800000;
+    color: white;
+}
+
+form {
+    text-align: center;
+    margin: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #800000;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #660000;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #800000;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+button[type="submit"] {
+    padding: 8px 12px;
+    background-color: #800000;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #660000;
+}
+
+/* Error Message */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: red;
+}
+
+/* No applicants found message */
+p.no-applicants {
+    text-align: center;
+    font-size: 20px;
+    color: #666;
+}
