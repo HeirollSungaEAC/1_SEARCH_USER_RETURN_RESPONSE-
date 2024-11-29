@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #800000; /* Maroon Color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Link Styles */
+a {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #800000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #800000;
+    color: white;
+}
+
+/* Form Styles */
+form {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Input fields, buttons */
+input[type="text"], input[type="email"], input[type="password"], input[type="submit"], input[type="button"], button[type="submit"] {
+    padding: 10px;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="button"], button[type="submit"] {
+    background-color: #800000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #660000;
+}
+
+/* Login/Registration Forms */
+.login-form, .register-form {
+    width: 100%;
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2, .register-form h2 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.login-form label, .register-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #800000;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #660000;
+}
+
+/* Buttons (Login/Register) */
+.register-form button[type="submit"], .login-form button[type="submit"] {
+    width: 100%;
+    background-color: #800000;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-form button[type="submit"]:hover, .login-form button[type="submit"]:hover {
+    background-color: #660000;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #800000;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Activity Log Table */
+.activity-log-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-log-table th, .activity-log-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.activity-log-table th {
+    background-color: #800000;
+    color: white;
+}
+
+.activity-log-table tr:hover {
+    background-color: #f2f2f2;
+}
+
+.activity-log-table td.actions {
+    text-align: center;
+}
+
+/* Error Messages and Alerts */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: red;
+}
+
+p.no-applicants {
+    text-align: center;
+    font-size: 20px;
+    color: #666;
+}
